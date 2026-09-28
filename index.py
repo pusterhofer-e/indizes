@@ -2,7 +2,11 @@ import sqlite3
 import time
 from pathlib import Path
 
-DB_DATEI = "personen.db"
+DB_DATEI = input("Welche Datenbank? (personen.db oder personen_bias.db) ")
+
+if not Path(DB_DATEI).exists():
+    print(f"Datei '{DB_DATEI}' gibt es nicht.")
+    exit()
 
 # Eingabe Name
 name = input("Nach welchem Vornamen soll gesucht werden? ")
