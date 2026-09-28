@@ -32,7 +32,7 @@ groesse()
 for i in range(3):
     suche()
 
-# Index anlegen
+# Index anlegen. Hier wird Speicher größer! (bei Vacuum dann wieder kleiner)
 cursor.execute("CREATE INDEX idx_personen_vorname ON personen(vorname)")
 conn.commit()
 
